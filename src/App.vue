@@ -20,77 +20,145 @@ import HelloWorld from './components/HelloWorld.vue'
   margin-top: 60px;
 }
 
-.wrapper {
+
+.card{
+  border-radius: 24px;
+  border: 3px solid #041E42;
+  padding: 8px;
   width: 400px;
-  border: 4px solid green;
-  display: inline-flex;
-}
-
-.image{
-  width: 100%;
-}
-
-.header {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0px 8px 24px #999;
+  background-color: lightgrey;
   text-align: center;
-  font-wieght: bold;
-  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.header h3,
- header h4 {
-  margin: 18px;
+.textbox{
+  font-size: 15px;
+  margin-left: 112px;
+  text-align: right;
+  border-radius: 24px;
 }
 
-.details {
-  margin-left: 24px;
-  padding: 10px;
-}
-.details summary {
-  font-size: 25px;
-  font-weight: bold;
+.description{
+  text-shadow: -1px 1px 2px #FFFFFF,
+				  1px 1px 2px #FFFFFF,
+				  1px -1px 0 #FFFFFF,
+				  -1px -1px 0 #FFFFFF;
 }
 
-.buttons button:focus,
-.buttons button:hover {
-  background-color: rgba(50, 0, 200, .5);
+.haxbtn{
+  display:inline-block;
+  text-align: center;
+  color: white;
+  background-color: #041E42;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 120px;
+  height: 32px;
+  box-shadow: 0px 10px 24px #999;
+  border: 1px solid #041E42;
+  visibility: hidden;
+  padding-top: 10px;
+  margin-right: 32px;
 }
 
-.buttons button:active {
-  background-color: rgba(200, 0, 50, .5);
+.haxbtn:hover{
+  color: #e0e0e0;
+  background-color: #07377a;
+  box-shadow: 0px 10px 24px white;
+  border: 1px solid #07377a;
 }
 
-.buttons {
-  display: block;
+.haxbtn:focus{
+  color: #e0e0e0;
+  background-color: #07377a;
+  box-shadow: 0px 10px 24px white;
+  border: 1px solid #07377a;
 }
 
-button {
-  padding: 15px;
-  font-size: 32px;
-  display: block;
+.title{
+  color: white;
+  font-size: 24px;
+  text-shadow: -1px 1px 2px #000,
+				  1px 1px 2px #000,
+				  1px -1px 0 #000,
+				  -1px -1px 0 #000;
 }
 
-@media only screen and (max-width: 600px) {
-  .wrapper {
-    
-   background-color: pink;
+.giaImg{
+  width: 200px;
+  border-radius: 24px;
+  box-shadow: 0px 10px 24px #999;
+  float: left;
+}
+
+.outsideBtn{
+  color: white;
+  background-color: #041E42;
+  border-radius: 5px;
+  font-size: 20px;
+  width: 120px;
+  height: 50px;
+  box-shadow: 0px 10px 24px #999;
+  border: 1px solid #041E42;
+  margin-right: 32px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.outsideBtn:hover{
+  color: #e0e0e0;
+  background-color: #07377a;
+  box-shadow: 0px 10px 24px white;
+  border: 1px solid #07377a;
+}
+
+.outsideBtn:focus{
+  color: #e0e0e0;
+  background-color: #07377a;
+  box-shadow: 0px 10px 24px white;
+  border: 1px solid #07377a;
+}
+
+.basic{
+  background-color: hotpink;
+}
+
+.hoverCard{
+  border: 3px solid purple;
+  box-shadow: 0px 8px 24px yellow;
+}
+
+input:checked + label + .description { display:none; }
+
+@media only screen and (min-width: 500px) and (max-width: 800px){
+  .haxbtn{
+    visibility: visible;
+ }
+  .outsideBtn{
+    display: inline-block;
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .wrapper {
-    
-   background-color: orange;
+@media screen and (max-width: 500px){
+  .card{
+    max-width: 75%;
   }
-}
-
-@media only screen and (max-width: 425px) {
-  .wrapper {
-    
-   font-size: 1rem;
-   font-wieght: normal;
+  .textbox{
+    margin-top: 110%;
+    margin-left: auto;
   }
-  .details {
-    display: none;
+  .giaImg{
+    width: 100%;
+  }
+  .title{
+    font-size: 150%;
+  }
+  .pScale{
+    font-size: 150%;
   }
 }
 
